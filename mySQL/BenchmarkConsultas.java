@@ -4,7 +4,7 @@ public class BenchmarkConsultas {
 
     private static final String URL = "jdbc:mysql://localhost:3306/ufg_turmas?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
     private static final String USUARIO = "root";
-    private static final String SENHA = "1704"; 
+    private static final String SENHA = "*****"; 
 
     public static void main(String[] args) {
         try (Connection conn = DriverManager.getConnection(URL, USUARIO, SENHA)) {
