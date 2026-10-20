@@ -15,7 +15,7 @@ public class PopulaBanco {
     public static void main(String[] args) {
         String csvFile = "da_turmas_2023_2.csv";
 
-        // Contadores de auditoria
+       
         long linhasLidas = 0;
         long ignoradasSemId = 0;
         long ignoradasIdRepetido = 0;
@@ -23,9 +23,9 @@ public class PopulaBanco {
         Set<Integer> idsTurmaProcessados = new HashSet<>();
 
         try {
-            // -------------------------------------------------------------
-            // 1. CRIAÇÃO DO BANCO DE DADOS E DAS TABELAS (DDL) COM MEDIÇÃO DE TEMPO
-            // -------------------------------------------------------------
+           
+            
+            
             long inicioCriacaoSchema = System.currentTimeMillis();
 
             try (Connection connBase = DriverManager.getConnection(URL_BASE, USUARIO, SENHA);
@@ -93,12 +93,12 @@ public class PopulaBanco {
 
             long tempoCriacaoSchema = System.currentTimeMillis() - inicioCriacaoSchema;
 
-            // 2. LEITURA DO CSV E POVOAMENTO DAS TABELAS COM MEDIÇÃO DE TEMPO
+            
             
             long inicioCarga = System.currentTimeMillis();
 
             try (Connection conn = DriverManager.getConnection(URL_DB, USUARIO, SENHA)) {
-                conn.setAutoCommit(false); // Otimização com transação em lote
+                conn.setAutoCommit(false); 
 
                 String sqlCampus = "INSERT IGNORE INTO campus (id_campus, nome_campus) VALUES (?, ?)";
                 String sqlCurso = "INSERT IGNORE INTO curso (id_curso, nome_curso) VALUES (?, ?)";
@@ -240,7 +240,7 @@ public class PopulaBanco {
 
             long tempoCarga = System.currentTimeMillis() - inicioCarga;
 
-            // 3. CONSULTA DE CONTAGEM DAS ENTIDADES E IMPRESSÃO DO RELATÓRIO
+           
 
             int totalCampi = 0, totalCursos = 0, totalComponentes = 0, totalDocentes = 0, totalTurmas = 0;
 
