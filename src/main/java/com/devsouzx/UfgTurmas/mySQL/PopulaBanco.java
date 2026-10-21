@@ -1,3 +1,5 @@
+package com.devsouzx.UfgTurmas.mySQL;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
@@ -6,16 +8,14 @@ import java.sql.*;
 import java.util.*;
 
 public class PopulaBanco {
-
     private static final String URL_BASE = "jdbc:mysql://localhost:3306/?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
     private static final String URL_DB = "jdbc:mysql://localhost:3306/ufg_turmas?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
     private static final String USUARIO = "root";
-    private static final String SENHA = "******"; 
+    private static final String SENHA = "";
 
     public static void main(String[] args) {
         String csvFile = "da_turmas_2023_2.csv";
 
-       
         long linhasLidas = 0;
         long ignoradasSemId = 0;
         long ignoradasIdRepetido = 0;
@@ -23,9 +23,6 @@ public class PopulaBanco {
         Set<Integer> idsTurmaProcessados = new HashSet<>();
 
         try {
-           
-            
-            
             long inicioCriacaoSchema = System.currentTimeMillis();
 
             try (Connection connBase = DriverManager.getConnection(URL_BASE, USUARIO, SENHA);
@@ -269,7 +266,7 @@ public class PopulaBanco {
             System.out.printf("Ignoradas (id repetido):    %d%n", ignoradasIdRepetido);
             System.out.printf("Turmas inseridas:          %d%n%n", totalTurmas);
 
-            System.out.println("Distintos (para conferir com o MySQL):");
+            System.out.println("Distintos:");
             System.out.printf("  campi:        %d%n", totalCampi);
             System.out.printf("  cursos:       %d%n", totalCursos);
             System.out.printf("  componentes:  %d%n", totalComponentes);

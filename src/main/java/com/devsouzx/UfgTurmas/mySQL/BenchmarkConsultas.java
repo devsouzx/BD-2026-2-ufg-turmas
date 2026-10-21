@@ -1,3 +1,5 @@
+package com.devsouzx.UfgTurmas.mySQL;
+
 import java.sql.*;
 
 public class BenchmarkConsultas {
