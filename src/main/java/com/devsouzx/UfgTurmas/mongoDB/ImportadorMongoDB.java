@@ -1,4 +1,4 @@
-package com.devsouzx.UfgTurmas;
+package com.devsouzx.UfgTurmas.mongoDB;
 
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
