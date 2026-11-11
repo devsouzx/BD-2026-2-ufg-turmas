@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS turma (
     data_fim DATE,
     matrizes_associadas TEXT,
     situacao_turma VARCHAR(100),
-    horario VARCHAR(100),
+    horario VARCHAR(255),
     codigo_componente VARCHAR(20) NOT NULL,
     id_curso INT NOT NULL,
     id_campus INT NOT NULL,

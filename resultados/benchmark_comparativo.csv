@@ -1,0 +1,14 @@
+id,operacao,itens_mysql,itens_mongodb,mysql_s,mongodb_s
+R1,"Turma por ID (atributos básicos)",1,1,0.000324,0.001539
+R2,"Turma por ID com dados relacionados",5,1,0.000736,0.001728
+F1,"Abertas por campus (top 50)",50,50,0.006979,0.011007
+F2,"Abertas com 20+ vagas ociosas",493,493,0.003058,0.011181
+F3,"Componente por trecho do nome",9,9,0.015371,0.009590
+J1,"Turmas de um docente",38,38,0.000233,0.001110
+A1,"Top docentes por nº de turmas",10,10,0.012099,0.018951
+A2,"Vagas e matriculados por campus",5,5,0.007487,0.010492
+A3,"Distribuição de docentes por turma",28,28,0.013042,0.012105
+E1,"Inserir turma com docentes",1,1,0.001687,0.002272
+E2,"Alterar matriculados por turma",1,1,0.001410,0.001637
+E3,"Renomear campus compartilhado",1,295,0.001323,0.010855
+E4,"Excluir turma com docentes",1,1,0.001410,0.001515
